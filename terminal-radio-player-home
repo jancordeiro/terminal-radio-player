@@ -1,0 +1,52 @@
+#!/bin/bash
+
+# >> TERMINAL RADIO PLAYER - 1.0 <<
+
+# Programa que roda a sua web radio preferida via terminal
+# usa um módulo (ffplay) do ffmpeg que vc precisa ter instalado
+# script baseado em uma versão do Slackjeff a fins de estudo
+# Você tem a liberdade de aprimorar esse código e distribuir se quiser.
+
+# Author: Jan Cordeiro <JanLinux>
+# Versão 1.0
+
+clear
+
+echo -e "\e[36;45;1m  +-------------------------------+  \e[0m"
+echo -e "\e[36;45;1m  |  >> TERMINAL RADIO PLAYER <<  |  \e[0m"
+echo -e "\e[36;45;1m  |  >>           Version 1.0 <<  |  \e[0m"
+echo -e "\e[36;45;1m  +-------------------------------+  \e[0m"
+echo ""
+
+# Exibe as opções para o usuário
+echo "Selecione uma opção:" 
+echo ""
+echo "(1) DIGITAR URL DA RADIO"
+echo "(2) ROCK E METAL"
+echo "(3) POP E HITS"
+echo "(4) CYBERPUNK" 
+echo "(5) SAIR" 
+echo ""
+# Lê a opção selecionada pelo usuário
+read -p "Selecione uma opção: " opcao
+
+# Executa o arquivo .sh correspondente à opção selecionada
+if [ $opcao -eq 1 ]
+then
+  ./terminal-radio-player
+elif [ $opcao -eq 2 ]
+then
+  ./terminal-radio-rock-metal
+elif [ $opcao -eq 3 ]
+then
+  ./terminal-radio-pop-hits
+elif [ $opcao -eq 4 ]
+then
+  ./terminal-radio-cyberpunk
+elif [ $opcao -eq 5 ]
+then
+  exit 0
+else
+  # Exibe uma mensagem de erro caso a opção selecionada não seja válida
+  echo "Opção inválida. Por favor, selecione uma opção válida." 
+fi

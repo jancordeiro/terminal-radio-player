@@ -1,0 +1,53 @@
+#!/bin/bash
+
+# >> TERMINAL RADIO PLAYER - 1.0 <<
+
+# Programa que roda a sua web radio preferida via terminal
+# usa um módulo (ffplay) do ffmpeg que vc precisa ter instalado
+# script baseado em uma versão do Slackjeff a fins de estudo
+# Você tem a liberdade de aprimorar esse código e distribuir se quiser.
+
+# Author: Jan Cordeiro <JanLinux>
+# Versão 1.0
+
+clear
+
+echo -e "\e[36;45;1m  +-------------------------------+  \e[0m"
+echo -e "\e[36;45;1m  |  >> TERMINAL RADIO PLAYER <<  |  \e[0m"
+echo -e "\e[36;45;1m  |  >>           Version 1.0 <<  |  \e[0m"
+echo -e "\e[36;45;1m  +-------------------------------+  \e[0m"
+echo ""
+
+# Lê a opção selecionada pelo usuário
+PS3=$'\n\e[37;45;1m Selecione uma Opção:\e[0m '
+select opcao in "The '80s Guy - Darksynth Radio" "AudioDrama Radio" "Sair"
+do
+  # Executa o arquivo .sh correspondente à opção selecionada
+  case $opcao in
+    "The '80s Guy - Darksynth Radio")
+      echo ""
+      echo -e "\e[35;1m+-----------------------------------------------------+\e[0m"
+      echo -e "\e[35;40;1m|# Você está ouvindo:\e[0m\e[32;40;5m The '80s Guy - Darksynth Radio \e[0m"
+      echo -e "\e[35;1m|-----------------------------------------------------+\e[0m"
+      echo -e "\e[35;1m|# Pressione CTRL+C para voltar a lista\e[0m"
+      echo -e "\e[35;1m|# Pressione CTRL+C 2x para fechar\e[0m"
+      echo -e "\e[35;1m+-----------------------------------------------------+\e[0m"
+      ffplay -nodisp "https://stream.nightride.fm/darksynth.ogg" &> /dev/null
+      ;;
+    "AudioDrama Radio")
+      echo ""
+      echo -e "\e[35;1m+-----------------------------------------------------+\e[0m"
+      echo -e "\e[35;40;1m|# Você está ouvindo:\e[0m\e[32;40;5m AudioDrama Radio \e[0m"
+      echo -e "\e[35;1m|-----------------------------------------------------+\e[0m"
+      echo -e "\e[35;1m|# Pressione CTRL+C para voltar a lista\e[0m"
+      echo -e "\e[35;1m|# Pressione CTRL+C 2x para fechar\e[0m"
+      echo -e "\e[35;1m+-----------------------------------------------------+\e[0m"
+      ffplay -nodisp "http://frits.servebeer.com:8000/stream2" &> /dev/null
+      ;;
+    "Sair")
+      # Sair do loop e abrir o arquivo .sh
+      ./terminal-radio-player-home
+      ;;
+  esac
+./terminal-radio-cyberpunk
+done
