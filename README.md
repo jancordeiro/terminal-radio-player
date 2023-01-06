@@ -15,3 +15,11 @@ You need to have `ffmpeg` program installed
 Once you've cloned this repository you have to run this command on terminal: `./trp-run`
 
 If you don't have `ffmpeg` installed you'll see a error message
+
+## Roadmap
+
+[ x ] Play radios from IceCast.org server
+[ x ] Play radio from URL
+[ x ] Make "ReadME" and "How-to" to repository
+[ ] Auto Install of FFMPEG program if it doesn't exist
+[ ] Make the MAN (manual)
