@@ -12,8 +12,6 @@ You need to have `ffmpeg` program installed
 
 ## Installation
 
-Once you've cloned this repository you have to run this command on terminal:
-
-`./trp-run`
+Once you've cloned this repository you have to run this command on terminal: `./trp-run`
 
 If you don't have `ffmpeg` installed you'll see a error message
