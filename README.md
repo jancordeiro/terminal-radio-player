@@ -1,10 +1,10 @@
 # Terminal Radio Player
 
-A simple Terminal Radio Player CLI for your Linux terminal
+A simple CLI Radio Player for your Linux terminal
 
 ## What
 
-Terminal Radio Player CLI allow you to listen web radios from URL or choose radio from a list into program.
+Terminal Radio Player allows you to listen web radios from URL or choose radio from a list included on it.
 
 ## Needs
 
